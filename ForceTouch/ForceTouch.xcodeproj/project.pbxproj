@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0E28111BF43B50006EF6C4 /* DynamicShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0E28101BF43B50006EF6C4 /* DynamicShortcuts.swift */; };
 		BB58BFB71BF424420020AEB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58BFB61BF424420020AEB8 /* AppDelegate.swift */; };
-		BB58BFB91BF424420020AEB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58BFB81BF424420020AEB8 /* ViewController.swift */; };
+		BB58BFB91BF424420020AEB8 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58BFB81BF424420020AEB8 /* MasterViewController.swift */; };
 		BB58BFBC1BF424420020AEB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB58BFBA1BF424420020AEB8 /* Main.storyboard */; };
 		BB58BFBE1BF424420020AEB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB58BFBD1BF424420020AEB8 /* Assets.xcassets */; };
 		BB58BFC11BF424420020AEB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB58BFBF1BF424420020AEB8 /* LaunchScreen.storyboard */; };
+		BB58BFC91BF4263B0020AEB8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58BFC81BF4263B0020AEB8 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB0E28101BF43B50006EF6C4 /* DynamicShortcuts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicShortcuts.swift; sourceTree = "<group>"; };
 		BB58BFB31BF424420020AEB8 /* ForceTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForceTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB58BFB61BF424420020AEB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB58BFB81BF424420020AEB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB58BFB81BF424420020AEB8 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		BB58BFBB1BF424420020AEB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB58BFBD1BF424420020AEB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB58BFC01BF424420020AEB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB58BFC21BF424420020AEB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB58BFC81BF4263B0020AEB8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				BB58BFB61BF424420020AEB8 /* AppDelegate.swift */,
-				BB58BFB81BF424420020AEB8 /* ViewController.swift */,
+				BB0E28101BF43B50006EF6C4 /* DynamicShortcuts.swift */,
+				BB58BFB81BF424420020AEB8 /* MasterViewController.swift */,
+				BB58BFC81BF4263B0020AEB8 /* DetailViewController.swift */,
 				BB58BFBA1BF424420020AEB8 /* Main.storyboard */,
 				BB58BFBD1BF424420020AEB8 /* Assets.xcassets */,
 				BB58BFBF1BF424420020AEB8 /* LaunchScreen.storyboard */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB58BFB91BF424420020AEB8 /* ViewController.swift in Sources */,
+				BB58BFC91BF4263B0020AEB8 /* DetailViewController.swift in Sources */,
+				BB0E28111BF43B50006EF6C4 /* DynamicShortcuts.swift in Sources */,
+				BB58BFB91BF424420020AEB8 /* MasterViewController.swift in Sources */,
 				BB58BFB71BF424420020AEB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +294,7 @@
 				BB58BFC71BF424420020AEB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

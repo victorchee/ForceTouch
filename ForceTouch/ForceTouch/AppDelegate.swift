@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        createDynamicShortcuts()
         return true
     }
 
@@ -41,6 +42,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // MARK: - Shortcut Item
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        guard let shortcutType = shortcutItem.type as String? else {
+            return
+        }
+        
+        let navigationController = self.window?.rootViewController as? UINavigationController
+        let master = navigationController?.viewControllers.first
+        master?.navigationItem.prompt = shortcutType
+    }
+    
+    /**
+     You can add 4 shortcuts at most.
+     */
+    private func createDynamicShortcuts() {
+        if let items = UIApplication.sharedApplication().shortcutItems {
+            for item in items {
+                if item.type == "Custom" {
+                    return
+                }
+            }
+        }
+        
+        // Item without icon
+        let item0 = UIApplicationShortcutItem(type: "Custom", localizedTitle: "Item without icon")
+        
+        // Item with icon
+        let icon = UIApplicationShortcutIcon(templateImageName: "momey")
+        let item1 = UIApplicationShortcutItem(type: "Custom", localizedTitle: "Item with icon", localizedSubtitle: "Subtitle", icon: icon, userInfo: nil)
+        
+        let systemIcon = UIApplicationShortcutIcon(type: UIApplicationShortcutIconType.Shuffle)
+        let item2 = UIApplicationShortcutItem(type: "Custom", localizedTitle: "Item with system icon", localizedSubtitle: "", icon: systemIcon, userInfo: nil)
+        
+        
+        if var items = UIApplication.sharedApplication().shortcutItems {
+            for item in [item0, item1, item2] {
+                items.append(item)
+            }
+            UIApplication.sharedApplication().shortcutItems = items
+        } else {
+            UIApplication.sharedApplication().shortcutItems = [item0, item1, item2]
+        }
+    }
 }
 
